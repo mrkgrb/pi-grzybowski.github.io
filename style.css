@@ -87,7 +87,7 @@ footer {
 
 ol li {
   margin-bottom: 2.5rem;
-  padding-left: 1rem;
+  padding-left: 5rem;
 }
 
 .publication-entry {
@@ -95,8 +95,17 @@ ol li {
 }
 
 .publication-entry .pub-image {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.publication-entry a[href^="https://doi.org"] {
+color: #003366; /* granatowy link do DOI */
+text-decoration: none;
+}
+
+.publication-entry a[href^="https://doi.org"]:hover {
+text-decoration: underline;
 }
