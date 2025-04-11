@@ -81,8 +81,13 @@ footer {
   font-weight: bold;
 }
 
+.volume-issue {
+  font-style: italic;
+}
+
 ol li {
   margin-bottom: 2.5rem;
+  padding-left: 1rem;
 }
 
 .publication-entry {
