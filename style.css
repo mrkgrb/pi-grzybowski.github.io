@@ -95,10 +95,15 @@ ol li {
 }
 
 .publication-entry .pub-image {
-  margin-top: 1.5rem;
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+display: block;
+margin: 1.5rem auto 0 auto; /* odstęp + wyśrodkowanie */
+max-width: 100%;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.publication-entry .pub-image:not([src]) {
+display: none; /* ukryj img bez src */
 }
 
 .publication-entry a[href^="https://doi.org"] {
@@ -109,3 +114,4 @@ text-decoration: none;
 .publication-entry a[href^="https://doi.org"]:hover {
 text-decoration: underline;
 }
+
