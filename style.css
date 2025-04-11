@@ -82,11 +82,16 @@ footer {
 }
 
 ol li {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
-.publication-entry img {
-  max-width: 200px;
-  display: block;
-  margin-bottom: 0.5rem;
+.publication-entry {
+  line-height: 1.6;
+}
+
+.publication-entry .pub-image {
+  margin-top: 1rem;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
