@@ -71,3 +71,22 @@ footer {
   height: 24px;
   filter: invert(100%);
 }
+
+.paper-title {
+  color: #2a6ebb;
+  font-weight: bold;
+}
+
+.paper-year {
+  font-weight: bold;
+}
+
+ol li {
+  margin-bottom: 2rem;
+}
+
+.publication-entry img {
+  max-width: 200px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
