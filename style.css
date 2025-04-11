@@ -116,42 +116,4 @@ text-decoration: none;
 text-decoration: underline;
 }
 
-/* Navigation bar with centered links and right-aligned icons */
-nav.main-nav {
-background: #222;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 1rem 2rem;
-position: relative;
-}
 
-.nav-links {
-display: flex;
-gap: 2rem;
-}
-
-.nav-links a {
-color: white;
-text-decoration: none;
-font-weight: bold;
-}
-
-.nav-links a:hover {
-text-decoration: underline;
-}
-
-.social-icons {
-position: absolute;
-right: 2rem;
-display: flex;
-gap: 1rem;
-}
-
-.social-icons img {
-width: 24px;
-height: 24px;
-filter: invert(100%);
-vertical-align: middle;
-}
