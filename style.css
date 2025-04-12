@@ -97,9 +97,9 @@ ol li {
 .publication-entry .pub-image {
 display: block;
 margin: 1.5rem auto 0 auto; /* odstęp + wyśrodkowanie */
-width: 300px; /* stała szerokość */
+width: 400px; /* stała szerokość */
 max-width: 100%;
-border-radius: 8px;
+border-radius: 0px;
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
