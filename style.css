@@ -48,7 +48,7 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }*/
-/* Navigation bar with centered links and right-aligned icons */
+/* Navigation bar with centered links */
 nav {
   background: #222;
   color: white;
@@ -75,10 +75,34 @@ nav {
   background-color: #2a6ebb;
   }
   
-  @media (max-width: 600px) {
+  .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  }
+  
+  @media (max-width: 768px) {
   nav {
   flex-direction: column;
-  font-size: 1rem;
+  align-items: flex-start;
+  }
+  
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  }
+  
+  .nav-links.show {
+  display: flex;
+  }
+  
+  .menu-toggle {
+  display: block;
   }
   }
 
