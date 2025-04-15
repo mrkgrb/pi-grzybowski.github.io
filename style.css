@@ -272,8 +272,8 @@ text-decoration: underline;
   }
   
   .person img {
-  width: 20ch;
-  height: 20ch;
+  width: 23%;
+  height: 23%
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
