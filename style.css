@@ -10,7 +10,7 @@ header {
   color: white;
   text-align: center;
   padding: 5rem 1rem;
-  background-image: url('banner.jpg'); /* Replace with your image */
+  background-image: url('banner_2.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -20,7 +20,7 @@ header::after {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.0);
 }
 
 header h1 {
@@ -250,4 +250,66 @@ text-decoration: underline;
     color: #666;
   }
   
+/* People page styles */
+.people-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 100ch;
+  margin: 3rem auto;
+  }
   
+  .person {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #f9f9f9;
+  }
+  
+  .person img {
+  width: 20ch;
+  height: 20ch;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .person-info {
+  flex: 1;
+  }
+  
+  .person-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.25rem;
+  }
+  
+  .person-role {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+  }
+  
+  .person-email {
+  color: #2a6ebb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  }
+  
+  .person-bio {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align:justify;
+  max-width: 100ch;
+  }
+  
+  .person.pi {
+  border: 2px solid #2a6ebb;
+  background-color: #eef5fb;
+  }
