@@ -29,25 +29,16 @@ header h1 {
   z-index: 1;
 }
 
-
-/*nav {
-  background: #222;
-  color: white;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
+header h2 {
+  position: relative;
+  font-size: 3rem;
+  z-index: 1;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+p {
+  margin-left: 1rem;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}*/
 /* Navigation bar with centered links */
 nav {
   background: #222;
@@ -312,4 +303,41 @@ text-decoration: underline;
   .person.pi {
   border: 2px solid #2a6ebb;
   background-color: #eef5fb;
+  }
+
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .contact-info {
+    flex: 1 1 300px;
+  }
+  
+  .contact-map {
+    flex: 1 1 300px;
+    min-width: 300px;
+    margin-top: 3rem;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 0.75rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+  }
+  
+  .social-icons img:hover {
+    filter: none;
   }
