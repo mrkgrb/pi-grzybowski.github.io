@@ -5,35 +5,72 @@ body {
   background-color: #f9f9f9;
 }
 
+/*
 header {
   background: #000;
   color: white;
   text-align: center;
   padding: 5rem 1rem;
   background-image: url('banner_2.jpg'); /* Replace with your image */
-  background-size: cover;
+  /*background-size: cover;
   background-position: center;
   position: relative;
-}
+}*/
 
-.group-logo {
+/*.group-logo {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
   height: 50%;           /* Scales to 30% of header's height */
-  aspect-ratio: 1 / 1;   /* Keep it square */
-  object-fit: contain;   /* Scales without distortion */
-  z-index: 2;
+  /*aspect-ratio: 1 / 1;   /* Keep it square */
+  /*object-fit: contain;   /* Scales without distortion */
+ /* z-index: 2;
   padding: 0.25rem;
   border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  /*box-shadow: 0 1px 5px rgba(0,0,0,0.2); */
+/*}*/
+
+header {
+  display: flex;
+  align-items: center;      /* Vertically align logo and text */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;          /* Allows wrapping on small screens */
+  padding: 2rem;
+  background: #000;
+  color: white;
+  background-image: url('banner_2.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
 }
+
+.group-logo {
+  height: 8rem;
+  width: auto;
+  padding: 0.25rem;
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/*header::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.05);
+}*/
 
 header::after {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.05);
+  z-index: 0;
+  pointer-events: none; /* this is critical */
 }
 
 header h1 {
@@ -108,7 +145,7 @@ nav {
   .menu-toggle {
   display: block;
   }
-
+/*
   .group-logo {
     position: static;
     display: block;
@@ -119,6 +156,17 @@ nav {
   header {
     text-align: center;
     padding-top: 1rem;
+  }*/
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0rem;
+  }
+
+  .group-logo {
+    height: 8rem;
+    /*margin-bottom: 1rem;*/
   }
 
   header h1 {

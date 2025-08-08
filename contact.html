@@ -7,19 +7,39 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 </head>
-<body>
-  <header>
-    <h1>Contact</h1>
-  </header>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", function () {
+      navLinks.classList.toggle("show");
+    });
+  });
+</script>
+
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/logo2.svg" alt="Group Logo" class="group-logo" />
+    </a>
+    <div class="header-text">
+      <h1>Contact</h1>
+    </div>  
+  </header>
+  
   <nav>
-    <button class="menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="people.html">People</a>
-      <a href="publications.html">Publications</a>
-      <a href="xray.html">X-Ray Gallery</a>
-      <a href="contact.html">Contact</a>
+    <div class="nav-container">
+    <button class="menu-toggle">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="xray.html">X-Ray Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </nav>
 
