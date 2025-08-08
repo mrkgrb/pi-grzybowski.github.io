@@ -16,6 +16,19 @@ header {
   position: relative;
 }
 
+.group-logo {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: 50%;           /* Scales to 30% of header's height */
+  aspect-ratio: 1 / 1;   /* Keep it square */
+  object-fit: contain;   /* Scales without distortion */
+  z-index: 2;
+  padding: 0.25rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
 header::after {
   content: "";
   position: absolute;
@@ -94,6 +107,22 @@ nav {
   
   .menu-toggle {
   display: block;
+  }
+
+  .group-logo {
+    position: static;
+    display: block;
+    margin: 0 auto 1rem auto;
+    height: 100px;
+  }
+
+  header {
+    text-align: center;
+    padding-top: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
   }
   }
 
