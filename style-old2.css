@@ -5,65 +5,27 @@ body {
   background-color: #f9f9f9;
 }
 
-/*
-header {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
-  background-image: url('banner_2.jpg'); /* Replace with your image */
-  /*background-size: cover;
-  background-position: center;
-  position: relative;
-}*/
-
-/*.group-logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  height: 50%;           /* Scales to 30% of header's height */
-  /*aspect-ratio: 1 / 1;   /* Keep it square */
-  /*object-fit: contain;   /* Scales without distortion */
- /* z-index: 2;
-  padding: 0.25rem;
-  border-radius: 6px;
-  /*box-shadow: 0 1px 5px rgba(0,0,0,0.2); */
-/*}*/
+/
 
 header {
+  display: flex;
+  align-items: center;      /* Vertically align logo and text */
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;          /* Allows wrapping on small screens */
+  padding: 2rem;
   background: #000;
   color: white;
   background-image: url('banner_2.jpg');
   background-size: cover;
   background-position: center;
-  padding: 2rem 0;
-}
-
-.header-inner {
-  max-width: 100ch;     /* same width as page content */
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
   text-align: center;
 }
 
 .group-logo {
-  height: 10rem;
+  height: 8rem;
   width: auto;
-  flex-shrink: 0;
-}
-
-.header-inner h1 {
-  flex: 1;             /* title takes remaining space */
-  text-align: center;
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-.header-spacer {
-  width: 8rem;         /* equal to logo width to balance flex */
+  padding: 0.25rem;
   flex-shrink: 0;
 }
 
@@ -158,61 +120,58 @@ nav {
   @media (max-width: 768px) {
 
 
-    .nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    }
-    
-    .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
-    gap: 0.5rem;
-    justify-content: flex-start; /* left-align items in the column */
-    }
-    
-    .nav-links.show {
-    display: flex;
-    }
-    
-    .menu-toggle {
+  .nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  }
+  
+  .nav-links {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  justify-content: flex-start; /* left-align items in the column */
+  }
+  
+  .nav-links.show {
+  display: flex;
+  }
+  
+  .menu-toggle {
+  display: block;
+  align-self: flex-start;
+
+  }
+
+/*
+  .group-logo {
+    position: static;
     display: block;
-    align-self: flex-start;
+    margin: 0 auto 1rem auto;
+    height: 100px;
+  }
 
-    }
+  header {
+    text-align: center;
+    padding-top: 1rem;
+  }*/
 
-    header {
-      flex-direction: column;
-      text-align: center;
-      gap: 0rem;
-      padding: 1.5rem 0;
-    }
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0rem;
+  }
 
-    .header-inner {
-      flex-direction: column;
-      text-align: center;
-      margin-top: 0rem;
-    }
+  .group-logo {
+    height: 8rem;
+    /*margin-bottom: 1rem;*/
+  }
 
-    .group-logo {
-      margin-bottom: 0rem;
-      height: 8rem;       /* smaller logo on phones if you like */
-    }
-
-    .header-spacer {
-      display: none;      /* no need for spacer in column mode */
-    }
-
-    .header-inner h1 {
-      font-size: 2.5rem;
-
-    }
-
-    header h1 {
-      font-size: 1.5rem;
-    }
+  header h1 {
+    font-size: 1.5rem;
+  }
   }
 
 .content {
@@ -244,7 +203,6 @@ footer {
 .paper-title {
   color: #2367b5;
   font-weight: bold;
-  font-size: 1.00rem;
 }
 
 .paper-year {
@@ -256,14 +214,12 @@ footer {
 }
 
 ol li {
-  margin-bottom: 1.5rem;
-  padding-left: 0.0rem;
+  margin-bottom: 2.5rem;
+  padding-left: 0.7rem;
 }
-
 
 .publication-entry {
   line-height: 1.6;
-  font-size: 1.00rem;
 }
 
 .publication-entry .pub-image {
@@ -285,30 +241,14 @@ display: none; /* ukryj img bez src */
   }
 
 .publication-entry a[href^="https://doi.org"] {
-color: black; 
+color: #003366; /* granatowy link do DOI */
 text-decoration: none;
 }
 
-/*.publication-entry a[href^="https://doi.org"]:hover {
+.publication-entry a[href^="https://doi.org"]:hover {
 text-decoration: underline;
-
-}*/
-.publication-link {
-  display: block;                /* makes the whole area clickable */
-  text-decoration: none;         /* remove underline */
-  color: inherit;                /* inherit text color */
-  padding: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
 }
 
-.publication-link:hover {
-  background-color: #eef5fb;     /* light blue highlight */
-}
-
-.publication-link:active {
-  background-color: #d8eaf9;     /* darker when clicked */
-}
 
 /* Cover gallery styles */
 .cover-gallery {
@@ -361,7 +301,7 @@ text-decoration: underline;
   .woodward-quote {
     font-style: italic;
     margin: 3rem auto 2rem;
-    max-width: 75ch;
+    max-width: 800px;
     padding: 1rem 2rem;
     border-left: 4px solid #2a6ebb;
     background-color: #f9f9f9;
@@ -459,12 +399,12 @@ text-decoration: underline;
   .person-email {
   color: #2a6ebb;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   }
   
   .person-bio {
   margin-top: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.4;
   text-align:justify;
   max-width: 100ch;
@@ -527,7 +467,7 @@ text-decoration: underline;
   }
   
   .group-research p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.6;
     text-align: justify;
    
@@ -537,6 +477,6 @@ text-decoration: underline;
   .research-topics {
     list-style-type: disc;
     padding-left: 2rem;
-    font-size: 1.0rem;
+    font-size: 1rem;
     line-height: 1.6;
   }
