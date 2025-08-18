@@ -480,17 +480,26 @@ text-decoration: underline;
     flex-direction: row;
     gap: 2rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 0rem;
   }
   
   .contact-info {
     flex: 1 1 300px;
   }
+
+
   
   .contact-map {
     flex: 1 1 300px;
     min-width: 300px;
-    margin-top: 3rem;
+    margin-top: 1rem;
+  }
+
+  .contact-map img {
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    max-width: 90%;
   }
   
   .social-icons {
