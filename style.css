@@ -226,10 +226,14 @@ nav a:hover {
     font-size: 1.5rem;
   }
 
+  .footer-inner {
+    min-height: auto;
+  }
+
   .visitor-counter {
     position: static;
-    display: block;
-    margin-top: 0.75rem;
+    transform: none;
+    margin-top: 10px;
     text-align: center;
   }
 }
@@ -241,6 +245,50 @@ nav a:hover {
 }
 
 footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 0.9rem 1rem 0.7rem;
+}
+
+.footer-banner {
+  position: relative;
+  width: 100%;
+  min-height: 24px;
+  margin-top: 0.6rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.social-links a img {
+  width: 24px;
+  height: 24px;
+  display: block;
+  filter: invert(100%);
+}
+
+.visitor-counter {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #ddd;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+footer p {
+  margin: 0.7rem 0 0;
+  color: #fff;
+}
+
+/*footer {
   background: #222;
   color: white;
   text-align: center;
@@ -274,7 +322,7 @@ footer {
   width: 24px;
   height: 24px;
   filter: invert(100%);
-}
+}*/
 
 .paper-title {
   color: #2367b5;
