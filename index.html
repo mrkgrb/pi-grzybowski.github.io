@@ -1,38 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grzybowski Research Group</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <script data-goatcounter="https://mrkgrb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script src="script.js" defer></script>
 </head>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
-<script>
-  fetch("https://mrkgrb.goatcounter.com/counter/index.html.json")
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById("gc-counter").textContent = data.count;
-    })
-    .catch(() => {
-      document.getElementById("gc-counter").textContent = "—";
-    });
-</script>
-
-
 <body>
   <header>
     <div class="header-inner">
@@ -47,7 +23,7 @@
 
   <nav>
     <div class="nav-container">
-      <button class="menu-toggle">☰</button>
+      <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="people.html">People</a>
@@ -89,7 +65,7 @@
         <a href="https://x.com/MarekGrb" target="_blank" rel="noopener noreferrer">
           <img src="images/twitter-icon.svg" alt="Twitter/X">
         </a>
-        <a href="https://bsky.app/profile/mrkgrb.bsky.social/" target="_blank" rel="noopener noreferrer">
+        <a href="https://bsky.app/profile/mrkgrb.bsky.social" target="_blank" rel="noopener noreferrer">
           <img src="images/bluesky-icon.svg" alt="Bluesky">
         </a>
       </div>

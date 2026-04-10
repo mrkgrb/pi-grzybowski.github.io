@@ -3,34 +3,11 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   background-color: #f9f9f9;
+  color: #222;
 }
 
-/*
 header {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 5rem 1rem;
-  background-image: url('banner_2.jpg'); /* Replace with your image */
-/*background-size: cover;
-  background-position: center;
   position: relative;
-}*/
-
-/*.group-logo {
-  position: absolute;
-  top: 1.5rem;
-  left: 1.5rem;
-  height: 50%;           /* Scales to 30% of header's height */
-/*aspect-ratio: 1 / 1;   /* Keep it square */
-/*object-fit: contain;   /* Scales without distortion */
-/* z-index: 2;
-  padding: 0.25rem;
-  border-radius: 6px;
-  /*box-shadow: 0 1px 5px rgba(0,0,0,0.2); */
-/*}*/
-
-header {
   background: #000;
   color: white;
   background-image: url('banner_2.jpg');
@@ -39,15 +16,24 @@ header {
   padding: 2rem 0;
 }
 
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .header-inner {
   max-width: 100ch;
-  /* same width as page content */
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .group-logo {
@@ -58,7 +44,6 @@ header {
 
 .header-inner h1 {
   flex: 1;
-  /* title takes remaining space */
   text-align: center;
   margin: 0;
   font-size: 2.5rem;
@@ -66,60 +51,14 @@ header {
 
 .header-spacer {
   width: 8rem;
-  /* equal to logo width to balance flex */
   flex-shrink: 0;
 }
 
-.header-text h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-/*header::after {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.05);
-}*/
-
-header::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  /* background: rgba(0, 0, 0, 0.05);*/
-  z-index: 0;
-  pointer-events: none;
-  /* this is critical */
-}
-
-header h1 {
-  position: relative;
-  font-size: 3rem;
-  z-index: 1;
-}
-
-header h2 {
-  position: relative;
-  font-size: 3rem;
-  z-index: 1;
-}
-
-p {
-  margin-left: 1rem;
-}
-
-/* Navigation bar with centered links */
 nav {
   background: #222;
   color: white;
   display: flex;
-  /*  flex-wrap: wrap;*/
   justify-content: center;
-  /*align-items: center;
-  gap: 1rem;*/
   padding: 1rem;
   font-size: 1.1rem;
 }
@@ -133,7 +72,8 @@ nav a {
   transition: background-color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
   text-decoration: none;
   background-color: #2a6ebb;
 }
@@ -142,16 +82,12 @@ nav a:hover {
   max-width: 75ch;
   width: 100%;
   position: relative;
-  /* lets us anchor the toggle on desktop if needed */
 }
 
-
-/* nav links */
 .nav-links {
   display: flex;
   gap: 1rem;
   justify-content: center;
-  /* true centering in the container */
 }
 
 .menu-toggle {
@@ -161,87 +97,56 @@ nav a:hover {
   color: white;
   border: none;
   cursor: pointer;
-
 }
 
-@media (max-width: 768px) {
-
-
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 0.5rem;
-    gap: 0.5rem;
-    justify-content: flex-start;
-    /* left-align items in the column */
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    align-self: flex-start;
-
-  }
-
-  header {
-    flex-direction: column;
-    text-align: center;
-    gap: 0rem;
-    padding: 1.5rem 0;
-  }
-
-  .header-inner {
-    flex-direction: column;
-    text-align: center;
-    margin-top: 0rem;
-  }
-
-  .group-logo {
-    margin-bottom: 0rem;
-    height: 8rem;
-    /* smaller logo on phones if you like */
-  }
-
-  .header-spacer {
-    display: none;
-    /* no need for spacer in column mode */
-  }
-
-  .header-inner h1 {
-    font-size: 2.5rem;
-
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  .footer-inner {
-    min-height: auto;
-  }
-
-  .visitor-counter {
-    position: static;
-    transform: none;
-    margin-top: 10px;
-    text-align: center;
-  }
-}
-
-.content {
+.content,
+.group-research,
+.cover-gallery,
+.cover-gallery-header,
+.people-section,
+.woodward-quote {
   max-width: 75ch;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content,
+.group-research {
   padding: 1rem;
+}
+
+.group-research {
+  margin-top: 1rem;
+}
+
+.group-research h2 {
+  font-size: 1.5rem;
+  color: #2a6ebb;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.group-research p,
+.contact-info p,
+.person-bio {
+  text-align: justify;
+}
+
+.group-research p,
+.contact-info p,
+footer p {
+  margin: 0;
+}
+
+.group-research p {
+  margin-bottom: 1rem;
+}
+
+.research-topics {
+  list-style-type: disc;
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 footer {
@@ -284,50 +189,14 @@ footer {
 }
 
 footer p {
-  margin: 0.7rem 0 0;
+  margin-top: 0.7rem;
   color: #fff;
 }
-
-/*footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-.footer-banner {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding-bottom: 2rem;
-}
-
-.visitor-counter {
-  position: absolute;
-  right: 20px;
-  bottom: 0;
-  font-size: 0.9rem;
-  color: #666;
-  white-space: nowrap;
-}
-
-.social-links {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.social-links a img {
-  width: 24px;
-  height: 24px;
-  filter: invert(100%);
-}*/
 
 .paper-title {
   color: #2367b5;
   font-weight: bold;
-  font-size: 1.00rem;
+  font-size: 1rem;
 }
 
 .paper-year {
@@ -340,30 +209,26 @@ footer p {
 
 ol li {
   margin-bottom: 1.5rem;
-  padding-left: 0.0rem;
+  padding-left: 0;
 }
-
 
 .publication-entry {
   line-height: 1.6;
-  font-size: 1.00rem;
+  font-size: 1rem;
 }
 
 .publication-entry .pub-image {
   display: block;
-  margin: 1.5rem auto 0 auto;
-  /* odstęp + wyśrodkowanie */
+  margin: 1.5rem auto 0;
   width: 40ch;
-  /* stała szerokość */
   max-width: 100%;
-  border-radius: 0px;
+  border-radius: 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
 }
 
 .publication-entry .pub-image:not([src]) {
   display: none;
-  /* ukryj img bez src */
 }
 
 .publication-entry .pub-image:hover {
@@ -375,44 +240,36 @@ ol li {
   text-decoration: none;
 }
 
-/*.publication-entry a[href^="https://doi.org"]:hover {
-text-decoration: underline;
-
-}*/
 .publication-link {
   display: block;
-  /* makes the whole area clickable */
   text-decoration: none;
-  /* remove underline */
   color: inherit;
-  /* inherit text color */
   padding: 1rem;
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }
 
-.publication-link:hover {
+.publication-link:hover,
+.publication-link:focus-visible {
   background-color: #eef5fb;
-  /* light blue highlight */
 }
 
 .publication-link:active {
   background-color: #d8eaf9;
-  /* darker when clicked */
 }
 
-/* Cover gallery styles */
 .cover-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.5rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
 .cover-gallery-header {
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 2rem 0 1rem;
+  margin: 2rem auto 1rem;
   text-align: center;
   color: #2367b5;
 }
@@ -445,14 +302,14 @@ text-decoration: underline;
   text-decoration: none;
 }
 
-.cover-gallery-item .doi-link:hover {
+.cover-gallery-item .doi-link:hover,
+.cover-gallery-item .doi-link:focus-visible {
   text-decoration: underline;
 }
 
 .woodward-quote {
   font-style: italic;
   margin: 3rem auto 2rem;
-  max-width: 75ch;
   padding: 1rem 2rem;
   border-left: 4px solid #2a6ebb;
   background-color: #f9f9f9;
@@ -469,13 +326,13 @@ text-decoration: underline;
   color: #666;
 }
 
-/* People page styles */
 .people-section {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 100ch;
   margin: 3rem auto;
+  padding: 0 1rem;
 }
 
 .person {
@@ -490,45 +347,13 @@ text-decoration: underline;
   background-color: #f9f9f9;
 }
 
-
 .person img {
-  width: 23%;
-  height: 23%;
+  width: clamp(120px, 23%, 220px);
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.person-photo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.person-photo img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.person-photo .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.person-photo .social-icons img {
-  width: 24px;
-  height: 24px;
-  filter: grayscale(100%);
-  transition: filter 0.2s ease;
-}
-
-.person-photo .social-icons img:hover {
-  filter: none;
+  flex-shrink: 0;
 }
 
 .person-info {
@@ -553,11 +378,15 @@ text-decoration: underline;
   font-size: 1rem;
 }
 
+.person-email:hover,
+.person-email:focus-visible {
+  text-decoration: underline;
+}
+
 .person-bio {
   margin-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.4;
-  text-align: justify;
   max-width: 100ch;
 }
 
@@ -571,14 +400,12 @@ text-decoration: underline;
   flex-direction: row;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-top: 0rem;
+  margin-top: 0;
 }
 
 .contact-info {
   flex: 1 1 300px;
 }
-
-
 
 .contact-map {
   flex: 1 1 300px;
@@ -587,20 +414,16 @@ text-decoration: underline;
 }
 
 .contact-map img {
-  padding: 0;
-  margin: 0;
-  align-items: center;
+  display: block;
   max-width: 90%;
+  margin: 0 0 1rem;
 }
 
 .social-icons {
   display: flex;
   gap: 0.75rem;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 1rem;
 }
-
 
 .social-icons img {
   width: 28px;
@@ -609,34 +432,76 @@ text-decoration: underline;
   transition: filter 0.2s ease;
 }
 
-.social-icons img:hover {
+.social-icons img:hover,
+.social-icons img:focus-visible {
   filter: none;
 }
 
-.group-research {
-  max-width: 75ch;
-  margin: 1rem auto;
-  padding: 1rem;
-}
+@media (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.group-research h2 {
-  font-size: 1.5rem;
-  color: #2a6ebb;
-  margin-bottom: 1rem;
-  text-align: center;
-}
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
 
-.group-research p {
-  font-size: 1.0rem;
-  line-height: 1.6;
-  text-align: justify;
+  .nav-links.show {
+    display: flex;
+  }
 
-  margin-bottom: 1rem;
-}
+  .menu-toggle {
+    display: block;
+    align-self: flex-start;
+  }
 
-.research-topics {
-  list-style-type: disc;
-  padding-left: 2rem;
-  font-size: 1.0rem;
-  line-height: 1.6;
+  header {
+    padding: 1.5rem 0;
+  }
+
+  .header-inner {
+    flex-direction: column;
+  }
+
+  .group-logo {
+    height: 8rem;
+  }
+
+  .header-spacer {
+    display: none;
+  }
+
+  .header-inner h1 {
+    font-size: 2rem;
+  }
+
+  .visitor-counter {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .person {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .person-bio,
+  .group-research p,
+  .contact-info p {
+    text-align: left;
+  }
+
+  .contact-map {
+    min-width: 0;
+  }
 }

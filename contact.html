@@ -6,19 +6,9 @@
   <title>Contact – Grzybowski Group</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script data-goatcounter="https://mrkgrb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script src="script.js" defer></script>
 </head>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    toggle.addEventListener("click", function () {
-      navLinks.classList.toggle("show");
-    });
-  });
-</script>
-
 <body>
 
   <header>
@@ -33,7 +23,7 @@
   
   <nav>
     <div class="nav-container">
-    <button class="menu-toggle">☰</button>
+    <button class="menu-toggle" aria-label="Open navigation menu">☰</button>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="people.html">People</a>
@@ -58,16 +48,16 @@
   
         <div class="social-icons">
 
-          <a href="https://orcid.org/0000-0001-6678-4950" target="_blank">
+          <a href="https://orcid.org/0000-0001-6678-4950" target="_blank" rel="noopener noreferrer">
             <img src="images/orcid-icon.svg" alt="ORCID" />
           </a>
-          <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank">
+          <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank" rel="noopener noreferrer">
             <img src="images/google-scholar-icon.svg" alt="Google Scholar" />
           </a>
-          <a href="https://bsky.app/profile/mrkgrb.bsky.social" target="_blank">
+          <a href="https://bsky.app/profile/mrkgrb.bsky.social" target="_blank" rel="noopener noreferrer">
             <img src="images/bluesky-icon.svg" alt="Bluesky" />
           </a>
-          <a href="https://x.com/MarekGrb" target="_blank">
+          <a href="https://x.com/MarekGrb" target="_blank" rel="noopener noreferrer">
             <img src="images/twitter-icon.svg" alt="X" />
           </a>
         </div>
@@ -87,8 +77,8 @@
   
       <!-- PRAWA STRONA – mapa -->
       <div class="contact-map">
-          <a href="https://www.icho.edu.pl/en/" target="_blank">
-          <img src="images/icho.svg" alt="Institute of Organic Chemistry<br />Polish Academy of Sciences" /></a><br />
+          <a href="https://www.icho.edu.pl/en/" target="_blank" rel="noopener noreferrer">
+          <img src="images/icho.svg" alt="Institute of Organic Chemistry, Polish Academy of Sciences" /></a><br />
         
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.885052801677!2d20.9628967!3d52.229092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb614d62b71b%3A0x8f8ac8e73f788aa3!2sInstytut%20Chemii%20Organicznej%20PAN!5e0!3m2!1spl!2spl!4v1713198722954!5m2!1spl!2spl"
@@ -104,11 +94,10 @@
     </div>
   </div>
 
-  <footer>
+    <footer>
     <div class="footer-banner">
       <div class="social-links">
-        <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank"
-          rel="noopener noreferrer">
+        <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank" rel="noopener noreferrer">
           <img src="images/google-scholar-icon.svg" alt="Google Scholar">
         </a>
         <a href="https://orcid.org/0000-0001-6678-4950" target="_blank" rel="noopener noreferrer">
@@ -117,11 +106,14 @@
         <a href="https://x.com/MarekGrb" target="_blank" rel="noopener noreferrer">
           <img src="images/twitter-icon.svg" alt="Twitter/X">
         </a>
-        <a href="https://bsky.app/profile/mrkgrb.bsky.social/" target="_blank" rel="noopener noreferrer">
+        <a href="https://bsky.app/profile/mrkgrb.bsky.social" target="_blank" rel="noopener noreferrer">
           <img src="images/bluesky-icon.svg" alt="Bluesky">
         </a>
       </div>
 
+      <div class="visitor-counter">
+        Visitors: <span id="gc-counter">…</span>
+      </div>
     </div>
 
     <p>&copy; 2025 Marek Grzybowski</p>
