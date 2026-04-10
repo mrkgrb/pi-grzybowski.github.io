@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grzybowski Research Group</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <script data-goatcounter="https://mrkgrb.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+  <script data-goatcounter="https://mrkgrb.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <script>
@@ -20,6 +20,18 @@
     });
   });
 </script>
+
+<script>
+  fetch("https://mrkgrb.goatcounter.com/counter/index.html.json")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("gc-counter").textContent = data.count;
+    })
+    .catch(() => {
+      document.getElementById("gc-counter").textContent = "—";
+    });
+</script>
+
 
 <body>
   <header>
@@ -35,7 +47,7 @@
 
   <nav>
     <div class="nav-container">
-    <button class="menu-toggle">☰</button>
+      <button class="menu-toggle">☰</button>
       <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="people.html">People</a>
@@ -50,8 +62,11 @@
   <section class="group-research">
     <h2>Welcome!</h2>
     <p>
-      This is the official website of the Marek Grzybowski Research Group (Group 10A) at the Institute of Organic Chemistry, Polish Academy of Sciences.<br />
-      We design and investigate advanced π-conjugated systems, where aromatic and antiaromatic character plays a central role in governing their photophysical properties. Our group combines synthetic organic chemistry with spectroscopy and theory to explore new classes of functional fluorophores.</p>
+      This is the official website of the Marek Grzybowski Research Group (Group 10A) at the Institute of Organic
+      Chemistry, Polish Academy of Sciences.<br />
+      We design and investigate advanced π-conjugated systems, where aromatic and antiaromatic character plays a central
+      role in governing their photophysical properties. Our group combines synthetic organic chemistry with spectroscopy
+      and theory to explore new classes of functional fluorophores.</p>
     <ul class="research-topics">
       <li>Analogues of polycyclic arenes containing main-group elements</li>
       <li>Low-molecular-weight near-infrared (NIR) fluorophores</li>
@@ -61,14 +76,28 @@
 
 
   <footer>
-    <div class="social-links">
-      <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank"><img src="images/google-scholar-icon.svg" alt="Google Scholar"></a>
-      <a href="https://orcid.org/0000-0001-6678-4950" target="_blank"><img src="images/orcid-icon.svg" alt="ORCID"></a>
-      <a href="https://x.com/MarekGrb" target="_blank"><img src="images/twitter-icon.svg" alt="Twitter/X"></a>
-      <a href="https://bsky.app/profile/mrkgrb.bsky.social/" target="_blank"><img src="images/bluesky-icon.svg" alt="Bluesky"></a>
+    <div class="footer-banner">
+      <div class="social-links">
+        <a href="https://scholar.google.com/citations?user=okxG60oAAAAJ&hl=pl" target="_blank">
+          <img src="images/google-scholar-icon.svg" alt="Google Scholar">
+        </a>
+        <a href="https://orcid.org/0000-0001-6678-4950" target="_blank">
+          <img src="images/orcid-icon.svg" alt="ORCID">
+        </a>
+        <a href="https://x.com/MarekGrb" target="_blank">
+          <img src="images/twitter-icon.svg" alt="Twitter/X">
+        </a>
+        <a href="https://bsky.app/profile/mrkgrb.bsky.social/" target="_blank">
+          <img src="images/bluesky-icon.svg" alt="Bluesky">
+        </a>
+      </div>
+
+      <div class="visitor-counter">
+        Visitors: <span id="gc-counter">...</span>
+      </div>
     </div>
     <p>&copy; 2025 Marek Grzybowski</p>
   </footer>
 </body>
-</html>
 
+</html>
