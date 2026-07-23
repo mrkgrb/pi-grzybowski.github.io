@@ -116,9 +116,7 @@ nav a:focus-visible {
 }
 
 .group-research {
-  max-width: 100ch;
   margin-top: 1rem;
-  padding-bottom: 2rem;
 }
 
 .group-research h2 {
@@ -144,113 +142,11 @@ footer p {
   margin-bottom: 1rem;
 }
 
-.research-intro {
-  max-width: 75ch;
-  margin: 0 auto;
-}
-
-.research-cards {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.research-card {
-  --card-accent: #2a6ebb;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 240px;
-  padding: 1.4rem;
-  overflow: hidden;
-  color: #222;
-  text-decoration: none;
-  background: #fff;
-  border: 1px solid #d8e0e8;
-  border-top: 4px solid var(--card-accent);
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(23, 43, 66, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.research-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--card-accent);
-  box-shadow: 0 8px 22px rgba(23, 43, 66, 0.15);
-}
-
-.research-card:focus-visible {
-  outline: 3px solid var(--card-accent);
-  outline-offset: 3px;
-}
-
-.research-card-number {
-  align-self: flex-start;
-  margin-bottom: 0.7rem;
-  color: var(--card-accent);
-  font-size: 0.78rem;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-}
-
-.research-card h3 {
-  margin: 0 0 0.75rem;
-  color: #1f2f40;
-  font-size: 1.22rem;
-  line-height: 1.3;
-}
-
-.research-card p {
-  flex: none;
-  margin: 0 0 0.1rem;
-  color: #444;
-  line-height: 1.55;
-  text-align: left;
-}
-
-.research-card-image {
-  width: 100%;
-  height: 220px;
-  margin: 0 0 0rem;
-  display: block;
-  object-fit: contain;
-  object-position: center;
-  background: #fff;
-
-  border-radius: 7px;
-}
-
-.research-card-link {
-  color: var(--card-accent);
-  font-size: 0.93rem;
-  font-weight: bold;
-}
-
-.research-card--acenes {
-  --card-accent: #2a6ebb;
-}
-
-.research-card--nir {
-  --card-accent: #7356a8;
-}
-
-.research-card--macrocycles {
-  --card-accent: #158276;
-}
-
-.research-card--ckcom {
-  --card-accent: #b85d24;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .research-card {
-    transition: none;
-  }
-
-  .research-card:hover {
-    transform: none;
-  }
+.research-topics {
+  list-style-type: disc;
+  padding-left: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 footer {
@@ -593,14 +489,6 @@ ol li {
     text-align: center;
   }
 
-  .research-cards {
-    grid-template-columns: 1fr;
-  }
-
-  .research-card {
-    min-height: 0;
-  }
-
   .person {
     flex-direction: column;
     align-items: center;
@@ -611,10 +499,6 @@ ol li {
   .group-research p,
   .contact-info p {
     text-align: left;
-  }
-
-  .research-card-image {
-    height: 155px;
   }
 
   .contact-map {
