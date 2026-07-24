@@ -122,10 +122,11 @@ nav a:focus-visible {
 }
 
 .group-research h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 1.25;
   color: #2a6ebb;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin: 0 0 0.6rem;
+  text-align: left;
 }
 
 .group-research p,
@@ -145,15 +146,26 @@ footer p {
 }
 
 .research-intro {
-  max-width: 75ch;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0 0 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #d8e0e8;
+}
+
+.research-intro p {
+  max-width: 90ch;
+  margin: 0;
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: left;
 }
 
 .research-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
-  margin-top: 1.5rem;
+  margin-top: 0;
 }
 
 .research-card {
